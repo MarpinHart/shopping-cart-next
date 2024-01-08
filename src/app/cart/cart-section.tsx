@@ -13,7 +13,7 @@ const CartSection: React.FC = () => {
         <ProjectCard key={cartElement.id} project={cartElement} />
       ))}
 
-      {/* reuse const defined before and make dynamic */}
+      {/* Can reuse € defined before and make dynamic */}
       <span> Total: {totalPrice}€</span>
     </>
   );

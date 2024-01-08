@@ -15,6 +15,7 @@ const ProjectButton: React.FC<{ project: Project | CartProject }> = ({
 
   const handleAddButtonClick = () => {
     if (existingProduct) {
+      // If the product is in the cart, increase the counter
       const updatedCart = cart.map((item) =>
         item.id === project.id
           ? { ...item, counter: item.counter + 1, total: project.price_per_ton }
@@ -22,6 +23,7 @@ const ProjectButton: React.FC<{ project: Project | CartProject }> = ({
       );
       setCart(updatedCart);
     } else {
+      // Create new cart item
       setCart((prev) => [
         ...prev,
         { ...project, counter: 1, total: project.price_per_ton },

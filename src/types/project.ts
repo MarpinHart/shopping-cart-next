@@ -7,7 +7,7 @@ export interface Project {
     offered_volume_in_tons: number;
     distribution_weight: number;
     supplier_name: string;
-    earliest_delivery: string; // Assuming it's a date string, you can adjust the type accordingly
-    sdgs: number[]; // Assuming it's an array of strings, you can adjust the type accordingly
+    earliest_delivery: string;
+    sdgs: number[]; 
     description: string;
   }
